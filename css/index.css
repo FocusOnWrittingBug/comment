@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a,i,s{
+    text-decoration: none;
+    color: #000;
+    font-style: normal;
+}
+ul{
+    list-style: none;
+}
+textarea,input,button{
+    border: none;
+    resize: none;
+    outline: none;
+}
+.clearfix:after{
+    content: "020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    /* 触发 hasLayout */
+    zoom: 1;
+}
+#wrap{
+  width: 700px;
+  margin: 0 auto;
+  border: 1px solid #c4d6ec;
+}
+h1{
+    border-bottom: 1px solid #c4d6ec;
+}
+.header{
+    padding: 10px 20px 20px;
+    margin: 0 auto;
+    border-bottom: 1px solid #c4d6ec;
+}
+.header_btn{
+    line-height: 26px;
+    padding-bottom: 15px;
+}
+.nav_btns{
+    float: left;
+}
+.pages{
+    float: right;
+    margin-right: -7px;
+}
+.pages li{
+    margin-right: 7px;
+}
+.post_msg{
+    display: inline-block;
+    width: 80px;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    font-size: 15px;
+    background: url(../images/icon_bg.png) no-repeat 0 -65px;
+
+}
+.look_around{
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    line-height: 26px;
+    font-size: 13px;
+    background: url(../images/icon_bg.png) no-repeat 0 -466px;
+
+}
+.pages li{
+    float: left;
+}
+.pages li a{
+    display: block;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    line-height: 8px;
+}
+.pages .ac{
+    background: blue;
+    color:white;
+}
+.pages li a:hover{
+    background: blue;
+    color:white;
+}
+.pages .pre,.pages .next{
+    width: 50px;
+    height: 8px;
+}
+/*---------------------------*/
+.sign_up{
+    display: none;
+    text-align: center;
+    color: blue;
+}
+.signup_btn{
+    width: 130px;
+    background: forestgreen;
+    border: 1px solid green;
+    font-size: 15px;
+    height: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    margin: 0 auto;
+
+}
+
+.header_input{
+    border: 1px solid #c4d6ec;
+    padding: 0 1px;
+    position: relative;
+}
+.txt_input{
+    height: 105px;
+    width: 100%;
+}
+.login{
+    border-top:1px solid #c4d6ec;
+    margin-top: -3px;
+    height: 46px;
+    line-height: 46px;
+    padding: 0 6px;
+    background: #f1f7fc;
+}
+.username{
+    height: 26px;
+    width: 126px;
+    border:1px solid #c4d6ec;
+    padding-left: 4px;
+}
+.login_btn{
+    float: right;
+    height: 25px;
+    width: 80px;
+    background: url(../images/icon_bg.png) no-repeat 0 -198px;
+    margin: 10px 0;
+    line-height: 25px;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+/*-------------------------------------------*/
+.main_header{
+    padding-left: 4px;
+    background: #e5eef8;
+    height: 35px;
+    line-height: 35px;
+}
+.main_header span{
+    font-size: 13px;
+}
+.main_header i{
+    color: red;
+}
+.comments{
+    padding:20px;
+    padding-top: 0;
+}
+.comment{
+    width: 100%;
+    border-bottom: 1px dotted #000;
+    position: relative;
+    padding:20px 0;
+}
+.comment_inner{
+    padding-left: 50px;
+}
+
+
+.logo{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: absolute;
+    top: 27px;
+    left: 0;
+    overflow: hidden;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+.txt_info{
+    width: 100%;
+}
+.info{
+    float: left;
+}
+.info span{
+    font-size: 13px;
+    color: #ccc;
+}
+.name{
+    color: blue;
+}
+.time{
+    float: right;
+    font-size: 13px;
+    color: #ccc;
+}
+.support>div{
+    float: right;
+}
+.support a{
+    color: blue;
+    font-size: 13px;
+}
+.support .red{
+    color: red;
+}
+.support .green{
+    color: green;
+}
+.tips{
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    background: #f1f7fc;
+    margin: 20px 0;
+}
+.support .agree,.support .disagree{
+    color:#ccc;
+    cursor: text;
+
+}
+.inputTip>div,.nameTip>div{
+    width: 130px;
+    height: 25px;
+    border-radius: 3px;
+    color: white;
+    background: red;
+    line-height: 25px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+.inputTip{
+    position: absolute;
+    width: 130px;
+    height: 25px;
+    left: 0;
+    right: 0;
+    top:40px;
+    margin: 0 auto;
+
+}
+.nameTip{
+    position: absolute;
+    left: 150px;
+    top:118px;
+    width: 130px;
+    height: 25px;
+}

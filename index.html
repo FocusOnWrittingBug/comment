@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" ng-app="myapp" ng-controller="indexCtrl">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/angularjs/angular.min.js"></script>
+    <script src="js/angularjs/angular-messages.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controller/indexController.js"></script>
+    <script src="js/filters/pagefilter.js"></script>
+
+</head>
+<body>
+<!--<div id="modal"></div>
+<div id="signup_box">
+    <div>
+        <div>用户名：<input type="text" name="sign_up_name"></div>
+        <div>密码：<input type="password" name="sign_up_name"></div>
+        <a href="#" class="sign_up_btn">注册</a>
+    </div>
+
+</div>-->
+<div id="wrap">
+    <h1>农民工欠薪"顽症" 李克强总理为何盯着这事不放?</h1>
+    <div class="header">
+        <div class="header_btn clearfix">
+            <div class="nav_btns">
+                <a href="javascript:;" class="post_msg" ng-click="sendClick()">快速发帖</a>
+                <a href="javascript:;" class="look_around">去跟帖广场看看></a>
+            </div>
+            <ul class="pages">
+                <li><a href="javascript:;" class="pre" ng-click="pre()">上一页</a></li>
+                <li ng-repeat="item in items|pagesFilter:pageSize:pageNum track by $index"
+                    ng-click="page(item)"><a href="javascript:;" ng-class="item==pageNum?'ac':''">{{item}}</a></li>
+                <li><a href="javascript:;" class="next" ng-click="next()">下一页</a></li>
+            </ul>
+        </div>
+        <form ng-show="sendBox" name="sendInput" novalidate>
+            <div class="header_input">
+                <textarea name="text" class="txt_input" cols="30" rows="10" placeholder="请文明发言" ng-model="txt" required></textarea>
+                <div class="login">
+                    <div class="inputTip" ng-messages="sendInput.text.$dirty && sendInput.text.$error">
+                        <div ng-message="required">请不要发送空消息</div>
+                    </div>
+                    <input type="text" class="username" name="username" placeholder="姓名" ng-model="username" required>
+                    <div class="nameTip" ng-messages="sendInput.username.$dirty && sendInput.username.$error">
+                        <div ng-message="required">请输入姓名</div>
+                    </div>
+                    <!--<div class="username">xxx</div>-->
+                    <button class="login_btn" ng-click="send()" ng-disabled="sendInput.$invalid">发表</button>
+                </div>
+            </div>
+            <!--<div class="sign_up">
+                <a href="#" class="signup_btn">要发帖请先注册</a>
+                <a href="#">已有账号？请登录</a>
+            </div>-->
+        </form>
+
+    </div>
+    <div class="main">
+        <div class="main_header">
+            <h3>热门跟帖<span>(跟帖<i>{{items.length}}</i>条，有<i>{{total}}</i>人参与)</span></h3>
+        </div>
+        <div class="comments">
+            <div class="comment clearfix" ng-repeat="item in items|pageFilter:pageNum:pageSize">
+                <div class="logo"><img src={{item.imgsrc}} alt=""></div>
+                <div class="comment_inner">
+                    <div class="txt_info clearfix">
+                        <div class="info">
+                            <a href="#" class="name">{{item.info.username}}</a>
+                            <span>[网易网友]</span>
+                        </div>
+                        <div class="time">
+                            {{item.info.time|date:'yyyy-MM-dd HH:mm:ss'}}
+                        </div>
+                    </div>
+                    <div class="comment_txt">{{item.info.txt}}</div>
+                    <div class="support">
+                        <div>
+                            <a href="javascript:;" class="" ng-class="item.agreesup?'':'agree'" ng-click="agree(item)">顶<span class="red">[{{item.agree}}]</span></a>
+                            <a href="javascript:;" class="" ng-class="item.disagreesup?'':'disagree'" ng-click="disagree(item)">踩<span class="green">[{{item.disagree}}]</span></a>
+                            <a href="#">回复<span></span></a>
+                            <a href="#">收藏<span></span></a>
+                            <a href="#">分享<span></span></a>
+                            <a href="#">复制<span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="header">
+        <div class="header_btn clearfix">
+            <ul class="pages">
+                <li><a href="javascript:;" class="pre" ng-click="pre()">上一页</a></li>
+                <li ng-repeat="item in items|pagesFilter:pageSize:pageNum track by $index"
+                    ng-click="page(item)"><a href="javascript:;" ng-class="item==pageNum?'ac':''">{{item}}</a></li>
+                <li><a href="javascript:;" class="next" ng-click="next()">下一页</a></li>
+            </ul>
+        </div>
+        <p class="tips">
+            文明社会，从理性发贴开始。谢绝地域攻击。
+        </p>
+    </div>
+</div>
+</body>
+</html>
